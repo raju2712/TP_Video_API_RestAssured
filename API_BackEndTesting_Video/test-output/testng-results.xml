@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-17T18:13:06 IST" name="Default suite" finished-at="2025-04-17T18:13:13 IST" duration-ms="7806">
+    <groups>
+    </groups>
+    <test started-at="2025-04-17T18:13:06 IST" name="Default test" finished-at="2025-04-17T18:13:13 IST" duration-ms="7806">
+      <class name="Mock.restFullBroker">
+        <test-method signature="createBooking()[pri:0, instance:Mock.restFullBroker@557caf28]" started-at="2025-04-17T18:13:06 IST" name="createBooking" finished-at="2025-04-17T18:13:11 IST" duration-ms="5321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking -->
+        <test-method signature="createToken()[pri:0, instance:Mock.restFullBroker@557caf28]" started-at="2025-04-17T18:13:11 IST" name="createToken" finished-at="2025-04-17T18:13:12 IST" duration-ms="1381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken -->
+        <test-method signature="partialUpdateBooking()[pri:0, instance:Mock.restFullBroker@557caf28]" started-at="2025-04-17T18:13:12 IST" name="partialUpdateBooking" finished-at="2025-04-17T18:13:13 IST" duration-ms="1030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- partialUpdateBooking -->
+      </class> <!-- Mock.restFullBroker -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
