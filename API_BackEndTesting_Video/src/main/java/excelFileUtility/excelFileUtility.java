@@ -51,7 +51,7 @@ public class excelFileUtility {
 		FileInputStream fis = new FileInputStream(path);
 		Workbook wb = WorkbookFactory.create(fis);
 		wb.getSheet(sheetname).getRow(row).createCell(cell).setCellValue(data);
-		 FileOutputStream fos = new FileOutputStream(path);
-		 wb.write(fos);
+		FileOutputStream fos = new FileOutputStream(path);
+		wb.write(fos);
 	}
 }

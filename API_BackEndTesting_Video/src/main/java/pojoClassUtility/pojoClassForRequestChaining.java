@@ -19,8 +19,6 @@ public class pojoClassForRequestChaining {
 	String role;
 
 	String username;
-	
-	private pojoClassForRequestChaining() {}
 
 	public pojoClassForRequestChaining(String designation, String dob, String email, String empName, int experience,
 			String mobileNo, String project, String role, String username) {
@@ -36,7 +34,7 @@ public class pojoClassForRequestChaining {
 		this.username = username;
 	}
 
-
+	private pojoClassForRequestChaining() {}
 
 	public void setDesignation(String designation) {
 		this.designation = designation;

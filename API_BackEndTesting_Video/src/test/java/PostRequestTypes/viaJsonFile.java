@@ -10,8 +10,9 @@ import io.restassured.http.ContentType;
 public class viaJsonFile {
 
 	public void postDataToServer() {
-	
+
 		File file = new File("./Project.json");
-	given().contentType(ContentType.JSON).body(file).when()
-	.post("http://49.249.28.218:8091/addProject").then().assertThat().statusCode(201).log().all();
-}}
+		given().contentType(ContentType.JSON).body(file).when().post("http://49.249.28.218:8091/addProject").then()
+				.assertThat().statusCode(201).log().all();
+	}
+}

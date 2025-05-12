@@ -16,7 +16,6 @@ public class wireMock {
 		jObj.put("cvv", "543");
 		jObj.put("expDate", "28/30");
 		
-		
 		given().contentType(ContentType.JSON).body(jObj.toJSONString()).when()
 		.post("http://localhost:9999/debitCard").then().assertThat().statusCode(200).log().all();
 		

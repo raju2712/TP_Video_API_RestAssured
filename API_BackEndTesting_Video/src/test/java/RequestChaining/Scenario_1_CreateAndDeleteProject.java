@@ -22,8 +22,8 @@ public class Scenario_1_CreateAndDeleteProject {
 		Random random = new Random();
 		int randNum = random.nextInt(1000);
 
-		// API - 1 --- Add Project
-		// Create an object to pojo class
+		//API - 1 --- Add Project
+		//Create an object to pojo class
 		ProjectPojo ppObj = new ProjectPojo("ABC" + randNum, "Raju", "Created", 0);
 
 		Response resp = given().contentType(ContentType.JSON).body(ppObj).when()
@@ -34,8 +34,8 @@ public class Scenario_1_CreateAndDeleteProject {
 		Object pId = resp.jsonPath().get("projectId");
 		System.out.println(pId);
 		
-		// API - 2 --- Delete Project
-		given().delete("http://49.249.28.218:8091/project/"+pId+"")
+		//API - 2 --- Delete Project
+		given().delete("   http://49.249.28.218:8091/project/"+pId+"   ")
 		.then().log().all();
 	  
 	}

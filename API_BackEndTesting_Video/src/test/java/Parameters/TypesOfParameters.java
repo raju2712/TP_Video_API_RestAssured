@@ -8,8 +8,8 @@ public class TypesOfParameters {
 
 	@Test
 	public void pathParam() {
-		given().pathParam("projectId", "NH_PROJ_19813").when()
-		.get("http://49.249.28.218:8091/project/{projectId}").then().log().all();
+		given().pathParam("projectId", "NH_PROJ_19813")
+		.when().get("http://49.249.28.218:8091/project/{projectId}").then().log().all();
 	}
 	
 	@Test
