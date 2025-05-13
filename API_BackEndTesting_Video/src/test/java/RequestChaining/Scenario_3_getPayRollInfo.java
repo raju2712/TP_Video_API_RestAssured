@@ -11,7 +11,7 @@ public class Scenario_3_getPayRollInfo {
 	@Test
 	public void sampleTest() {
 		
-		//API - 1 ---- Get Auth
+		//API - 1 ---- Get Auth 2.0
 		Response resp = given()
 		.formParam("client_id", "ninza-client")
 		.formParam("client_secret", "gPQBf1Yxew5OMccMhzos1GefIyiSnXzM")

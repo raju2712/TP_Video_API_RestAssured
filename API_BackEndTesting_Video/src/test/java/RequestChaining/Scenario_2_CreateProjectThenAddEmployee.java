@@ -34,7 +34,7 @@ public class Scenario_2_CreateProjectThenAddEmployee {
 		// API - 2 --- Add Employee to the created Project
 		// Create an object to pojo class
 		pojoClassForRequestChaining employPojo = new pojoClassForRequestChaining("Tester", "27/01/2000", "raju123@gmail.com", 
-				                                 "Raju"+randNum, 3, "7896541230", "Repo", "ROLE_EMPLOYEE", "Raju"+randNum);
+				                                 "Raju"+randNum, 3, "7896541230", pName, "ROLE_EMPLOYEE", "Raju"+randNum);
 		
 		given().contentType(ContentType.JSON).body(employPojo).when().post("http://49.249.28.218:8091/employees")
 		.then().assertThat().statusCode(201).log().all();

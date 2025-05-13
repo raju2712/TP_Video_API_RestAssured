@@ -14,14 +14,14 @@ public class pojoClassForRequestChaining {
 
 	String mobileNo;
 
-	String project;
+	Object project;
 
 	String role;
 
 	String username;
 
 	public pojoClassForRequestChaining(String designation, String dob, String email, String empName, int experience,
-			String mobileNo, String project, String role, String username) {
+			String mobileNo, Object project, String role, String username) {
 		super();
 		this.designation = designation;
 		this.dob = dob;
@@ -88,7 +88,7 @@ public class pojoClassForRequestChaining {
 		this.project = project;
 	}
 
-	public String getProject() {
+	public Object getProject() {
 		return project;
 	}
 
