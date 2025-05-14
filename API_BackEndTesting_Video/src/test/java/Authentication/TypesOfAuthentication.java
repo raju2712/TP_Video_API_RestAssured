@@ -10,7 +10,7 @@ public class TypesOfAuthentication {
 	
 	@Test
 	public void BasicAuth() {
-		//by giving username and password
+		//by giving username and password 
 		given()
 		  .auth().basic("rmgyantra", "rmgy@9999").log().all()
 		.when()
