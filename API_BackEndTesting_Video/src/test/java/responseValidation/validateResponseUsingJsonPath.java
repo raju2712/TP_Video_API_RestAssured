@@ -20,6 +20,7 @@ public class validateResponseUsingJsonPath {
 		
 		List<String> Project_Name = JsonPath.read(resp.asString(), ".content[*].projectName");
 		//System.out.println(Project_Name);
+		
 		for (String data : Project_Name) {
 			System.out.println(data);
 		}

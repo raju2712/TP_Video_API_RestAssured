@@ -29,8 +29,8 @@ public class AddProject {
 		
 		//For Schema Validation
 		resp.then().body(JsonSchemaValidator.matchesJsonSchema(new File(".\\src\\test\\resources\\jsonschema.json")));
-		resp.then().body("msg", Matchers.instanceOf(String.class));     //value of msg key is in string format
-		resp.then().body("teamSize", Matchers.instanceOf(int.class));   //value of teamSize key is in int format
+		resp.then().body("msg", Matchers.instanceOf(String.class));     //verifying that the value of msg key is in string format
+		resp.then().body("teamSize", Matchers.instanceOf(int.class));   //verifying that the value of teamSize key is in int format
 		
 	}
 }

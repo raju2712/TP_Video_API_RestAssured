@@ -42,7 +42,7 @@ public class TypesOfAuthentication {
 	}
 	
 	@Test
-	public void BearerTokenAuth() {
+	public void BearerToken() {
 		
 		given()
 		  .auth().oauth2("eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJsZUN3YUNPai00RXVlbzJkTFFrTmZuLXh2M0F3Nm5ZdWZtS0pINXBFWkNNIn0"
