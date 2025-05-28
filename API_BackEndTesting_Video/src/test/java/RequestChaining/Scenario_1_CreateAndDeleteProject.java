@@ -35,7 +35,7 @@ public class Scenario_1_CreateAndDeleteProject {
 		System.out.println(pId);
 		
 		//API - 2 --- Delete Project
-		given().delete("   http://49.249.28.218:8091/project/"+pId+"")
+		given().delete("http://49.249.28.218:8091/project/"+pId+"")
 		.then().log().all();
 	  
 	}

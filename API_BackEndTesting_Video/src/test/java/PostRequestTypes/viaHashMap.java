@@ -1,13 +1,12 @@
 package PostRequestTypes;
 
-import org.json.simple.JSONObject;
+import static io.restassured.RestAssured.given;
+
+import java.util.HashMap;
+
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
-
-import static io.restassured.RestAssured.*;
-
-import java.util.HashMap;
 
 public class viaHashMap {
 

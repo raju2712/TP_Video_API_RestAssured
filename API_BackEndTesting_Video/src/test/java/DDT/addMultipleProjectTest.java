@@ -21,6 +21,7 @@ public class addMultipleProjectTest {
 				+ "  \"status\": \""+status+"\",\r\n"
 				+ "  \"teamSize\": 0\r\n"
 				+ "}";
+		
 		given().contentType(ContentType.JSON).body(reqBody).when().post("http://49.249.28.218:8091/addProject")
 		.then().log().all();
 	}

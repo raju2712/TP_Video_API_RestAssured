@@ -1,4 +1,4 @@
-package DataMAsking;
+package DataMasking;
 
 import static io.restassured.RestAssured.given;
 

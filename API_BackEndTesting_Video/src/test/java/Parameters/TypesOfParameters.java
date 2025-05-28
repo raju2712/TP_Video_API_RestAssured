@@ -28,6 +28,7 @@ public class TypesOfParameters {
 	
 	@Test
 	public void ParamPara() {
+		
 		given().param("createdBy", "Raju").log().all()
 		.when().post("http://49.249.28.218:8091/project").then().log().all();
 		//with post,put,patch method parameter not shown in url,shown in request body (it acts like Form Parameter)

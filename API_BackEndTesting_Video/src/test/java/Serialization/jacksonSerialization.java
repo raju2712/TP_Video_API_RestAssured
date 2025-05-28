@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @JsonPropertyOrder(value = { "createdBy", "teamSize", "projectName", "status" })
 
-@JsonIgnoreProperties(value = { "teamSize" })
+@JsonIgnoreProperties(value = { "teamSize" ,"status" })
 
 class project { // POJO Class
 	private String projectName;
