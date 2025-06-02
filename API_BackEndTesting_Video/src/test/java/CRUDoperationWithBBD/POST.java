@@ -15,12 +15,12 @@ public class POST {
 	public void postDataToServer() {
 		
 		JSONObject jsonObj = new JSONObject();
-	    jsonObj.put("createdBy", "ABC");
-	    jsonObj.put("projectName", "ABC009");
+	    jsonObj.put("createdBy", "ABCD");
+	    jsonObj.put("projectName", "ABC0099");
 	    jsonObj.put("status", "Created");
 	    jsonObj.put("teamSize", 0);
 	    
-		given().contentType(ContentType.JSON).body(jsonObj.toJSONString()).when()
+		given().contentType(ContentType.JSON).body(jsonObj.toJSONString())
 		.post("http://49.249.28.218:8091/addProject").then().assertThat().statusCode(201).log().all();
 	
 		
