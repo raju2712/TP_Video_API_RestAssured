@@ -1,5 +1,6 @@
 package responseValidation;
 
+import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
@@ -20,6 +21,6 @@ public class validateResponseHeaderTest {
 		resp.then().assertThat().statusCode(200);
 		
 		//By key value pair
-		resp.then().assertThat().header("Transfer-Encoding", "chunked");
+		resp.then().assertThat().header("Transfer-Encoding",Matchers.equalTo("chunked"));
 	}
 }

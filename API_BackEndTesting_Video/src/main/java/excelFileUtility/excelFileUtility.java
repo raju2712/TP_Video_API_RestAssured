@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
 
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
@@ -40,7 +41,6 @@ public class excelFileUtility {
 	}
 	
 	/**
-	 * 
 	 * @param sheetname
 	 * @param row
 	 * @param cell
@@ -50,7 +50,8 @@ public class excelFileUtility {
 	public void setDataBackToExcel(String path,String sheetname, int row, int cell, String data) throws Throwable {
 		FileInputStream fis = new FileInputStream(path);
 		Workbook wb = WorkbookFactory.create(fis);
-		wb.getSheet(sheetname).getRow(row).createCell(cell).setCellValue(data);
+		wb.getSheet(sheetname).createRow(row).createCell(cell, CellType.STRING).setCellValue(data);
+		//wb.getSheet(sheetname).createRow(row).createCell(cell).setCellValue(data);
 		FileOutputStream fos = new FileOutputStream(path);
 		wb.write(fos);
 	}

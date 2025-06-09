@@ -56,8 +56,7 @@ public class TypesOfAuthentication {
 				+ "		  		+ \"ghNg7nASI7EwpU_BfA7txVYrl2oOaMTpRSys-rPUFpjELa_2GJVptWyzoJHBJgQbbwL1uzheBMe2g_dfu1ZY8okp_r0e9-IYATS8Cp8E20zUuR6q6vo3Pi9-O\"\r\n"
 				+ "		  		+ \"4F6zrnkiI96hwSXj0H7RIFs_Gx--RzFvWme8wtrHHze23Fx7lgk7kSkcSlLESaFcxB6ldHfmT7PKxPTRIc0RCMSFmWLx0aiV_6gsMgJsV0Vbd_G6T4ZSO3kjf\"\r\n"
 				+ "		  		+ \"Z6qvGMOJr2ogFSIoXT-g")
-		.when()
-		  .get("http://49.249.28.218:8091/projects")
+		.when().get("http://49.249.28.218:8091/projects")
 		.then()
 		.log().all();
 	}

@@ -22,9 +22,9 @@ public class dataMasking {
 		
 		ProjectPojo ppObj = new ProjectPojo("ABC"+randNum, "Raju", "Created", 0);
 		
-	given().config(config.logConfig(LogConfig.logConfig().blacklistHeader("Content-Type","Keep-Alive")))
-	.contentType(ContentType.JSON).body(ppObj).when().post("http://49.249.28.218:8091/addProject")
-	.then().assertThat().statusCode(201).log().all();
+		given().config(config.logConfig(LogConfig.logConfig().blacklistHeader("Content-Type","Keep-Alive")))
+		.contentType(ContentType.JSON).body(ppObj).when().post("http://49.249.28.218:8091/addProject")
+		.then().assertThat().statusCode(201).log().all();
 	
 	}
 }

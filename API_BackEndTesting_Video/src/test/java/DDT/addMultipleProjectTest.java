@@ -32,7 +32,7 @@ public class addMultipleProjectTest {
 		excelFileUtility eutil = new excelFileUtility();
 		int lastRowCount = eutil.getRowCount("Sheet1");
 		
-		Object[][] objArr = new Object[lastRowCount][2];
+		Object[][] objArr = new Object [lastRowCount][2];
 		
 		for(int i=0; i<lastRowCount; i++) {
 			

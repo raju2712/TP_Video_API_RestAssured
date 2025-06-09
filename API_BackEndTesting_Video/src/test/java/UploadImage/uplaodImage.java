@@ -13,6 +13,7 @@ public class uplaodImage {
 		File img = new File("C:\\Users\\FloweR KinG\\Downloads\\kitty-cat-kitten-pet-45201.jpeg");
 		
 		given().multiPart(img)
-		.when().post("https://petstore.swagger.io/v2/pet/9223372036854775807/uploadImage").then().log().all();
+		.when().post("https://petstore.swagger.io/v2/pet/9223372036854775807/uploadImage")
+		.then().log().all();
 	}
 }

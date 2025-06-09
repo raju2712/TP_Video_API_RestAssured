@@ -20,11 +20,14 @@ public class restFullBroker {
 	public void createBooking() {
 		
 		File file = new File("./createBooking.json");
+		
 		Response resp = given().contentType(ContentType.JSON).body(file).when()
 		.post("https://restful-booker.herokuapp.com/booking");
 		
 		resp.then().assertThat().statusCode(200).log().all();
 		resp.then().assertThat().contentType(ContentType.JSON) .log().all();
+		
+		//Body Validation
 		
 		resp.then().assertThat().body("booking.firstname", Matchers.equalTo("Raju"));
 		resp.then().assertThat().body("booking.lastname", Matchers.equalTo("R"));

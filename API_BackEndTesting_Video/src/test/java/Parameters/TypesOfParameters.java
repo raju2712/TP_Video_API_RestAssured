@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.*;
 public class TypesOfParameters {
 
 	@Test
-	public void pathParam() {
+	public void pathParam() {    //Like an EndPoint
 		given().pathParam("projectId", "NH_PROJ_19813")
 		.when().get("http://49.249.28.218:8091/project/{projectId}").then().log().all();
 	}
@@ -35,7 +35,7 @@ public class TypesOfParameters {
 		
 		given().param("createdBy", "Raju").log().all()
 		.when().get("http://49.249.28.218:8091/project").then().log().all();
-		//with get method parameter shown in url,not shown in request body (it acts like Query Parameter)
+		//with get,delete method parameter shown in url,not shown in request body (it acts like Query Parameter)
 
 		
 	}
