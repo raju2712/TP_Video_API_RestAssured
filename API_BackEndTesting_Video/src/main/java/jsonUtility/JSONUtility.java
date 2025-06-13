@@ -22,19 +22,17 @@ public class JSONUtility {
 	}
 	
 	/**
-	 * 
 	 * @param resp
 	 * @param value
 	 * @return
 	 */
 	public String getDataFromJsonPathUsingKey(Response resp,String value) {
 		String data = resp.jsonPath().get(value);
-					//resp.jsonPath().get("msg");
+					//resp.jsonPath().get("msg");------ in script
 		return data;
 	}
 	
 	/**
-	 * 
 	 * @param resp
 	 * @param jsonXpath
 	 * @param expData
@@ -45,11 +43,11 @@ public class JSONUtility {
 		boolean flag = false;
 		for(String str : list) {
 			if(str.equals(expData)) {
-				System.out.println(expData + "is available ========== PASS");
+				System.out.println(expData + " is available ========== PASS");
 				flag = true;
 			}
 			else {
-				System.out.println(expData + "is not available ========== FAIL");
+				System.out.println(expData + " is not available ========== FAIL");
 			}
 		}
 		return flag;
@@ -68,8 +66,11 @@ public class JSONUtility {
 //				.when().post(fUtil.readDataFromPropertyFile("accessTokenUri"));
 //		
 //				resp.then().assertThat().statusCode(200).log().all();
+//	
 //		//Capture TOKEN from Response
 //				String token = resp.jsonPath().get("access_token");
 //				return token;
 //	}
+	
+	
 }
