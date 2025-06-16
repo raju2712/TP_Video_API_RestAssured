@@ -15,15 +15,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @JsonIgnoreProperties(value = { "teamSize" ,"status" })
 
 class project { // POJO Class
+	
 	private String projectName;
 	@JsonProperty(value = "created By")
 	private String createdBy;
 	private String status;
 	private int teamSize;
-
-	// Empty Constructor
-	private project() {
-	}
 
 	public project(String projectName, String createdBy, String status, int teamSize) {
 		super();
@@ -32,6 +29,9 @@ class project { // POJO Class
 		this.status = status;
 		this.teamSize = teamSize;
 	}
+	
+	// Empty Constructor for De-serialization 
+	private project() { }
 
 	public String getProjectName() {
 		return projectName;

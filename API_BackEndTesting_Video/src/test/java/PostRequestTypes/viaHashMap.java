@@ -11,7 +11,7 @@ import io.restassured.http.ContentType;
 public class viaHashMap {
 
 	@Test
-	public void postDataToServer() {
+	public void postDataToServer() {   //Mostly used to pass multiple cookies
 		
 		HashMap<String, Object> Hmap = new HashMap();
 		Hmap.put("createdBy", "Raju");

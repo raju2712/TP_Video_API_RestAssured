@@ -13,16 +13,26 @@ import io.restassured.response.Response;
 public class validateResponseUsingJsonPath {
 
 	@Test
-	public void validateThroughJsonPath() {
+	public boolean validateThroughJsonPath() {
 
 		Response resp = given().get("http://49.249.28.218:8091/projects-paginated");
 		resp.then().log().all();
+
+		List<String>  Project_Name = JsonPath.read(resp.asString(), ".content[*].projectName");
+		// System.out.println(Project_Name);
+		String expData = "RAPO123";
+
+		boolean flag = false;
 		
-		List<String> Project_Name = JsonPath.read(resp.asString(), ".content[*].projectName");
-		//System.out.println(Project_Name);
-		
-		for (String data : Project_Name) {
-			System.out.println(data);
+		for (String str : Project_Name) {
+			if (str.equals(expData)) {
+				System.out.println(expData + " is available ========== PASS");
+				flag = true;
+			} else {
+				System.out.println(expData + " is not available ========== FAIL");
+			}
 		}
+		return flag;
+
 	}
 }

@@ -12,7 +12,7 @@ public class PlaceAnOrder {
 	@Test
 	public void placeAnOrder() {
 		
-	    String authToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJycjEyM0BnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTc0Mzg4Mjg5NywiaWF0IjoxNzQzODQ2ODk3fQ.oSYLQMFt3waVSQZ1JNYyp2tiFia-NgS-JjvUHA1NgQQ";
+	    String bearerToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJycjEyM0BnbWFpbC5jb20gU0hPUFBFUiIsImV4cCI6MTc0Mzg4Mjg5NywiaWF0IjoxNzQzODQ2ODk3fQ.oSYLQMFt3waVSQZ1JNYyp2tiFia-NgS-JjvUHA1NgQQ";
 
 		JSONObject jObj = new JSONObject();
 		jObj.put("addressId", 111348);
@@ -27,7 +27,7 @@ public class PlaceAnOrder {
 		jObj.put("streetInfo", "string");
 		jObj.put("type", "string");
 		
-		given().auth().oauth2(authToken).relaxedHTTPSValidation().contentType(ContentType.JSON)
+		 given().header("Authorization", "Bearer " + bearerToken).relaxedHTTPSValidation().contentType(ContentType.JSON)
 		.body(jObj.toJSONString()).when().post("https://www.shoppersstack.com/shopping/shoppers/235453/orderss")
 		.then().log().all();
 	}
